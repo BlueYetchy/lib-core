@@ -1,6 +1,6 @@
 {
     "name": "blueyetchy/lib-core",
-    "description": "Lib core",
+    "description": "Lib core for Laravel projects",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -20,7 +20,7 @@
         }
     },
     "require": {
-        "php": ">=7.4"
+        "php": ">=8.0"
     },
     "require-dev": {
         "orchestra/testbench": "^6.0",

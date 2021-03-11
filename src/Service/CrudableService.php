@@ -96,9 +96,19 @@ abstract class CrudableService
     }
 
     /**
-     * Return relative repository abstract class to set property into constructor
+     * Return instance of the repository
      *
      * @return BaseRepository
      */
-    abstract public function getRepositoryClass(): BaseRepository;
+    public function getRepository(): BaseRepository
+    {
+        return $this->repository;
+    }
+
+    /**
+     * Return relative repository abstract class to set property into constructor
+     *
+     * @return string
+     */
+    abstract protected function getRepositoryClass(): string;
 }
