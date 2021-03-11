@@ -62,6 +62,18 @@ abstract class CrudableService
     }
 
     /**
+     * Save several new model in database and return boolean success
+     *
+     * @param array $arrayAttributes
+     *
+     * @return bool
+     */
+    public function multipleCreate(array $arrayAttributes): bool
+    {
+        return $this->repository->rawQuery()->insert($arrayAttributes);
+    }
+
+    /**
      * Delete records from the database.
      *
      * @param Model|int|string $model

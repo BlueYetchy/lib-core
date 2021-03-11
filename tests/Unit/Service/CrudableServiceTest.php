@@ -40,6 +40,18 @@ class CrudableServiceTest extends TestCase implements BaseRepositoryTestInterfac
         $this->assertDatabaseHas((new UserMock())->getTable(), ['name' => 'ecaflip']);
     }
 
+    public function test_multiple_create_model()
+    {
+        $this->crudableService->multipleCreate([
+            ['name' => 'ouginak', 'email' => 'ouginak@mail.com'],
+            ['name' => 'eniripsa', 'email' => 'eniripsa@mail.com'],
+        ]);
+
+        $this->assertDatabaseCount((new UserMock())->getTable(), 2);
+        $this->assertDatabaseHas((new UserMock())->getTable(), ['name' => 'ouginak']);
+        $this->assertDatabaseHas((new UserMock())->getTable(), ['name' => 'eniripsa']);
+    }
+
     /**
      * @inheritDoc
      */
