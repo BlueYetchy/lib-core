@@ -1,0 +1,36 @@
+{
+    "name": "blueyetchy/lib-core",
+    "description": "Lib core",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Théo",
+            "email": "tochampion38@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "BlueYetchy\\LibCore\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "BlueYetchy\\LibCore\\Tests\\": "tests"
+        }
+    },
+    "require": {
+        "php": ">=7.4"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.5"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "BlueYetchy\\LibCore\\Providers\\LibCoreServiceProvider"
+            ]
+        }
+    }
+}
